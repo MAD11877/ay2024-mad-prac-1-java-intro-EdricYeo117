@@ -14,10 +14,19 @@ public class Question4
      *     **
      *     *
      * 
-     * Hint: 2 loops are required. System.out.print(...) to print on single line.
+     * Hint: 2 loops are required. System.out.print(...) to print on single line.4
+     * 
      */
      
     Scanner in = new Scanner(System.in);
-    
+    System.out.print("Enter an integer for triangle base: ");
+    for (int i = in.nextInt(); i > 0; i--)
+    {
+      for (int j = i; j > 0; j--)
+      {
+        System.out.print("*");
+      }
+      System.out.println();
+    }
   }
 }
