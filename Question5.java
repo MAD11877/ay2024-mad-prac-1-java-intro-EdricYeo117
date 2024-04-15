@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Question5 {
   public static void main(String[] args) {
@@ -25,33 +26,25 @@ public class Question5 {
      * 2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
+    Scanner scanner = new Scanner(System.in);
+    int n = scanner.nextInt();
+    ArrayList<Integer> numbers = new ArrayList<>();
 
-    Scanner in = new Scanner(System.in);
-    ArrayList<Integer> numbers = new ArrayList<Integer>();
-    System.out.println();
-    for (int i = in.nextInt(); i > 0; i--) {
-      System.out.println();
-      int integer = in.nextInt();
-      numbers.add(integer);
+    for (int i = 0; i < n; i++) {
+      int num = scanner.nextInt();
+      numbers.add(num);
     }
 
-    int mode = numbers.get(0);
-    int maxFrequency = 1;
-    int currentFrequency = 1;
-
-    // Find the mode using one loop
-    for (int i = 1; i < numbers.size(); i++) {
-      if (numbers.get(i).equals(numbers.get(i - 1))) {
-        currentFrequency++;
-      } else {
-        currentFrequency = 1;
-      }
-
-      if (currentFrequency > maxFrequency) {
-        maxFrequency = currentFrequency;
-        mode = numbers.get(i);
+    int maxCount = 0;
+    int mode = 0;
+    for (int num : numbers) {
+      int count = Collections.frequency(numbers, num);
+      if (count > maxCount) {
+        maxCount = count;
+        mode = num;
       }
     }
+    
     System.out.println(mode);
   }
 }
