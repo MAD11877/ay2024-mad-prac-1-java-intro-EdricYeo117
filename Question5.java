@@ -29,9 +29,9 @@ public class Question5 {
 
     Scanner in = new Scanner(System.in);
     ArrayList<Integer> numbers = new ArrayList<Integer>();
-    System.out.println("Enter a number of integers to enter: ");
+    System.out.println();
     for (int i = in.nextInt(); i > 0; i--) {
-      System.out.println("Enter an integer: ");
+      System.out.println();
       int integer = in.nextInt();
       numbers.add(integer);
     }
@@ -53,6 +53,6 @@ public class Question5 {
         mode = numbers.get(i);
       }
     }
-    System.out.println("Mode: " + mode);
+    System.out.println(mode);
   }
 }
