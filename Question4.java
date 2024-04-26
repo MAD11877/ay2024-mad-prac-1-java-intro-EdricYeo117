@@ -18,7 +18,7 @@ public class Question4
      * 
      */
      
-    Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.in); 
     for (int i = in.nextInt(); i > 0; i--)
     {
       for (int j = i; j > 0; j--)
